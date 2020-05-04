@@ -5,10 +5,10 @@ This repository has the test setup used for unit testing on Openzeppelin impleme
 ## Dependencies
 
 For this test setup, following are the modules being used and its versions.
-
+> :warning: **oz/test-environment** does not support solidity-coverage yet. Using it will produce wrong coverage data!
 
 * openzeppelin/contracts@v2.5.0
-* openzeppelin/test-environment@0.1.4
+* ~~openzeppelin/test-environment@0.1.4~~
 * openzeppelin/test-helpers@0.5.5
 * mocha@7.1.1
 * chai@4.2.0
@@ -19,7 +19,7 @@ setup_env script will create a truffle project, a npm package to accomodate and 
 
 ### Manual steps are required after script execution
 
-Edit *package.json*
+~~Edit *package.json*~~
 
     "scripts": {
     -  "test": "npx truffle test"

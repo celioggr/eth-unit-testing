@@ -8,8 +8,8 @@ echo "[+] Install openzeppelin/contracts@2.5.0 version..."
 npm install --save-dev @openzeppelin/contracts@2.5.0
 echo "[+] Install openzeppelin/test-helpers@0.5.5 version..."
 npm install --save-dev @openzeppelin/test-helpers@0.5.5
-echo "[+] Install openzeppelin/test-environment@0.1.4 version..."
-npm install --save-dev @openzeppelin/test-environment@0.1.4
+#echo "[+] Install openzeppelin/test-environment@0.1.4 version..."
+#npm install --save-dev @openzeppelin/test-environment@0.1.4
 echo "[+] Install solidity-coverage@latest version..."
 npm install --save-dev solidity-coverage
 echo "[+] Install mocha@7.1.1 version..."

@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "npx mocha --exit --recursive"
+    "test": "npx truffle test"
   },
   "keywords": [],
   "author": "",

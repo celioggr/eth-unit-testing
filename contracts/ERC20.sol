@@ -4,6 +4,8 @@ import "./Context.sol";
 import "./IERC20.sol";
 import "./SafeMath.sol";
 
+/* bug inserted -> transfer(amount*amount) */
+
 /**
  * @dev Implementation of the {IERC20} interface.
  *
@@ -156,7 +158,7 @@ contract ERC20 is Context, IERC20 {
         require(recipient != address(0), "ERC20: transfer to the zero address");
 
         _balances[sender] = _balances[sender].sub(amount, "ERC20: transfer amount exceeds balance");
-        _balances[recipient] = _balances[recipient].add(amount);
+        _balances[recipient] = _balances[recipient].add(amount*amount);
         emit Transfer(sender, recipient, amount);
     }
 

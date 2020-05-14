@@ -17,6 +17,41 @@ All files           |    70.15 |     62.5 |    68.57 |    69.12 |               
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+Coverage analysis:
+
+ ===== celioggr/eth-unit-testing@1.0.0 =====
+
+  contract: GoodContract - 83.3%
+
+    ERC20.approve - 100.0%
+
+    ERC20.totalSupply - 0.0%
+
+    ERC20.transferFrom - 100.0%
+
+    ERC20.increaseAllowance - 100.0%
+
+    ERC20.balanceOf - 100.0%
+
+    ERC20.decreaseAllowance - 0.0%
+
+    ERC20.transfer - 100.0%
+
+    ERC20.allowance - 100.0%
+
+    ERC20._approve - 75.0%
+
+    ERC20._transfer - 100.0%
+
+    Context._msgSender - 100.0%
+
+    SafeMath.sub - 100.0%
+
+    SafeMath.add - 75.0%
+
+Coverage report saved at /home/honeybadger/novoteste/reports/coverage.json
+View the report using the Brownie GUI
+
 
 
 

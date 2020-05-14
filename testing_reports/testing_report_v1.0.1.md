@@ -36,5 +36,41 @@ All files           |    70.15 |     62.5 |    68.57 |    69.12 |               
 
 
 
+Coverage analysis:
+
+ ===== BuggycontractaProject =====
+
+  contract: BuggyContractA - 72.9%
+    ERC20.approve - 100.0%
+
+    ERC20.totalSupply - 0.0%
+
+    ERC20.transferFrom - 33.3%
+
+    ERC20.increaseAllowance - 100.0%
+
+    ERC20.balanceOf - 100.0%
+
+    ERC20.decreaseAllowance - 100.0%
+
+    ERC20.transfer - 100.0%
+
+    ERC20.allowance - 100.0%
+
+    ERC20._approve - 75.0%
+
+    ERC20._transfer - 80.0%
+
+    Context._msgSender - 100.0%
+
+    SafeMath.sub - 75.0%
+
+    SafeMath.add - 75.0%
+
+Coverage report saved at /home/honeybadger/novoteste/reports/coverage.json
+View the report using the Brownie GUI
+
+
+=========================================================== 1 passed in 419.79s (0:06:59) ============================================================
 
 

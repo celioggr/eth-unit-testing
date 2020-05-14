@@ -34,4 +34,39 @@ All files           |     69.7 |     62.5 |    68.57 |    68.66 |               
 > solidity-coverage cleaning up, shutting down ganache server
 Error: ❌ 7 test(s) failed under coverage.
 
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Coverage analysis:
+
+ ===== celioggr/eth-unit-testing@1.1.1 =====
+
+  contract: TestToken - 79.0%
+    ERC20.approve - 100.0%
+
+    ERC20.totalSupply - 0.0%
+
+    ERC20.transferFrom - 100.0%
+
+    ERC20.increaseAllowance - 100.0%
+
+    ERC20.balanceOf - 100.0%
+
+    ERC20.decreaseAllowance - 0.0%
+
+    ERC20.transfer - 100.0%
+
+    ERC20.allowance - 100.0%
+
+    ERC20._approve - 75.0%
+
+    ERC20._transfer - 100.0%
+
+    Context._msgSender - 100.0%
+
+    SafeMath.sub - 75.0%
+
+    SafeMath.add - 75.0%
+
+Coverage report saved at /home/honeybadger/novoteste/reports/coverage.json
+View the report using the Brownie GUI
+

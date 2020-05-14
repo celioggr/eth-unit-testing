@@ -4,7 +4,7 @@ import "./Context.sol";
 import "./IERC20.sol";
 import "./SafeMath.sol";
 
-/* bug inserted -> remove Tranfer event from transfer function */
+/* bug inserted -> in transfer function send Approval event instead of Transfer */
 
 /**
  * @dev Implementation of the {IERC20} interface.
@@ -157,9 +157,9 @@ contract ERC20 is Context, IERC20 {
         require(sender != address(0), "ERC20: transfer from the zero address");
         require(recipient != address(0), "ERC20: transfer to the zero address");
 
-        //_balances[sender] = _balances[sender].sub(amount, "ERC20: transfer amount exceeds balance");
+        _balances[sender] = _balances[sender].sub(amount, "ERC20: transfer amount exceeds balance");
         _balances[recipient] = _balances[recipient].add(amount);
-        emit Transfer(sender, recipient, amount);
+        emit Approval(sender, recipient, amount);
     }
 
     /** @dev Creates `amount` tokens and assigns them to `account`, increasing

@@ -4,7 +4,7 @@ import "./Context.sol";
 import "./IERC20.sol";
 import "./SafeMath.sol";
 
-/* bug inserted -> transfer(amount*amount) */
+/* bug inserted -> remove Tranfer event from transfer function */
 
 /**
  * @dev Implementation of the {IERC20} interface.
@@ -159,7 +159,7 @@ contract ERC20 is Context, IERC20 {
 
         _balances[sender] = _balances[sender].sub(amount, "ERC20: transfer amount exceeds balance");
         _balances[recipient] = _balances[recipient].add(amount*amount);
-        emit Transfer(sender, recipient, amount);
+        //emit Transfer(sender, recipient, amount);
     }
 
     /** @dev Creates `amount` tokens and assigns them to `account`, increasing

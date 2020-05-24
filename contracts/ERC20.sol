@@ -1,10 +1,8 @@
 pragma solidity ^0.5.0;
 
 import "./Context.sol";
-import "./IERC20.sol";
+import "../interfaces/IERC20.sol";
 import "./SafeMath.sol";
-
-/* bug inserted -> in transfer function send Approval event instead of Transfer */
 
 /**
  * @dev Implementation of the {IERC20} interface.
@@ -159,7 +157,7 @@ contract ERC20 is Context, IERC20 {
 
         _balances[sender] = _balances[sender].sub(amount, "ERC20: transfer amount exceeds balance");
         _balances[recipient] = _balances[recipient].add(amount);
-        emit Approval(sender, recipient, amount);
+        emit Transfer(sender, recipient, amount);
     }
 
     /** @dev Creates `amount` tokens and assigns them to `account`, increasing

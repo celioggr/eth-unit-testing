@@ -1,10 +1,14 @@
 pragma solidity ^0.5.0;
 
 import "./Context.sol";
-import "../interfaces/IERC20.sol";
+import "./IERC20.sol";
 import "./SafeMath.sol";
 
 /**
+bug insert -> in function Mint
+without any check or using SafeMath when the sum of tokens changes,overflows are possible
+in totalSupply
+
  * @dev Implementation of the {IERC20} interface.
  *
  * This implementation is agnostic to the way tokens are created. This means
@@ -133,7 +137,7 @@ contract ERC20 is Context, IERC20 {
      * `subtractedValue`.
      */
     function decreaseAllowance(address spender, uint256 subtractedValue) public returns (bool) {
-        _approve(_msgSender(), spender, _allowances[_msgSender()][spender].sub(subtractedValue, "ERC20: decreased allowance below zero"));
+        _approve(_msgSender(),spender, _allowances[_msgSender()][spender].sub(subtractedValue, "ERC20: decreased allowance below zero"));
         return true;
     }
 
@@ -172,8 +176,10 @@ contract ERC20 is Context, IERC20 {
     function _mint(address account, uint256 amount) internal {
         require(account != address(0), "ERC20: mint to the zero address");
 
-        _totalSupply = _totalSupply.add(amount);
-        _balances[account] = _balances[account].add(amount);
+        //_totalSupply = _totalSupply.add(amount);
+        _totalSupply = _totalSupply + amount;
+        //_balances[account] = _balances[account].add(amount);
+        _balances[account] = _balances[account] + amount;
         emit Transfer(address(0), account, amount);
     }
 
